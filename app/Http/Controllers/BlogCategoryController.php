@@ -34,7 +34,7 @@ class BlogCategoryController extends Controller
             'name' => $validated['name'],
         ]);
 
-        return redirect('/blogcategory');
+        return redirect('/blogcategory')->with('success', 'Blog Category Berhasil Dibuat!');
     }
 
     public function edit($id)
@@ -54,13 +54,13 @@ class BlogCategoryController extends Controller
             'name' => $validated['name'],
         ]);
 
-        return redirect('/blogcategory');
+        return redirect('/blogcategory')->with('success', 'Blog Category Berhasil Diubah!');
     }
 
     public function destroy($id)
     {
         BlogCategory::destroy($id);
 
-        return redirect('/blogcategory');
+        return redirect('/blogcategory')->with('success', 'Blog Category Berhasil Dihapus!');
     }
 }

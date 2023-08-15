@@ -16,7 +16,9 @@
             </a>
         </li>
         <div class="nav-item">
-            <a href="{{ route('logout') }}" class="btn btn-outline">Logout</a>
+            <a href="{{ route('logout') }}" class="btn btn-outline">@auth
+                    {{ Auth::user()->name }}
+                @endauth | Logout</a>
         </div>
 
     </ul>
