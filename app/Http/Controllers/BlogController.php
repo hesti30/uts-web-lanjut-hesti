@@ -46,7 +46,7 @@ class BlogController extends Controller
             'thumbnail' => $saveImage['thumbnail']
         ]);
 
-        return redirect('/blog');
+        return redirect('/blog')->with('success', 'Blog Berhasil Dibuat!');
     }
 
     public function edit($id)
@@ -89,13 +89,13 @@ class BlogController extends Controller
         ]);
 
 
-        return redirect('/blog');
+        return redirect('/blog')->with('success', 'Blog Berhasil Diubah!');
     }
 
     public function destroy($id)
     {
         Blog::destroy($id);
 
-        return redirect('/blog');
+        return redirect('/blog')->with('success', 'Blog Berhasil Dihapus!');
     }
 }

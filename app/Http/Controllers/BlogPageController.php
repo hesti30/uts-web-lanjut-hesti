@@ -10,7 +10,7 @@ class BlogPageController extends Controller
     public function blogPage()
     {
         $blogs = Blog::with('category')
-            ->get();
+            ->paginate(8);
 
         $newblogs = Blog::with('category')
             ->orderBy('id', 'DESC')

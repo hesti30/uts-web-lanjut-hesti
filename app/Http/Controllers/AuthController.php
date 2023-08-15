@@ -22,7 +22,7 @@ class AuthController extends Controller
         ]);
 
         // validasi apakah data request (input) sesuai dengan database
-        if (Auth::attempt($credentials)) {
+        if (Auth::guard('web')->attempt($credentials)) {
             $request->session()->regenerate();
             return redirect('adminindex');
         }
