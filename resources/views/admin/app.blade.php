@@ -96,7 +96,7 @@
 
                 <!-- Default box -->
                 @yield('content')
-                {{-- @include('sweetalert::alert') --}}
+                @include('sweetalert::alert')
                 <!-- /.card -->
 
             </section>
