@@ -6,6 +6,7 @@ use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BlogPageController;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\ProjectCategoryController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ProjectPageController;
 use Illuminate\Support\Facades\Route;
@@ -49,3 +50,20 @@ Route::post('/blog', [BlogController::class, 'store']);
 Route::get('/blog/{id}/edit', [BlogController::class, 'edit']);
 Route::put('/blog/{id}', [BlogController::class, 'update']);
 Route::get('/blog/{id}/delete', [BlogController::class, 'destroy']);
+
+// Project Category
+Route::get('/projectcategory', [ProjectCategoryController::class, 'index']);
+Route::get('/projectcategory/add', [ProjectCategoryController::class, 'create']);
+Route::post('/projectcategory', [ProjectCategoryController::class, 'store']);
+Route::get('/projectcategory/{id}/edit', [ProjectCategoryController::class, 'edit']);
+Route::put('/projectcategory/{id}', [ProjectCategoryController::class, 'update']);
+Route::get('/projectcategory/{id}/delete', [ProjectCategoryController::class, 'destroy']);
+
+
+// Project
+Route::get('/project', [ProjectController::class, 'index']);
+Route::get('/project/add', [ProjectController::class, 'create']);
+Route::post('/project', [ProjectController::class, 'store']);
+Route::get('/project/{id}/edit', [ProjectController::class, 'edit']);
+Route::put('/project/{id}', [ProjectController::class, 'update']);
+Route::get('/project/{id}/delete', [ProjectController::class, 'destroy']);

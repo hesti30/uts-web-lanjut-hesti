@@ -7,9 +7,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto text-center">
-                    <li class="nav-item mx-5">
+                    {{-- <li class="nav-item mx-5">
                         <a class="nav-link" href="{{ '/' }}">Service</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item mx-5">
                         <a class="nav-link" href="{{ '/projects' }}">Project</a>
                     </li>
@@ -17,7 +17,7 @@
                         <a class="nav-link logo" href="{{ '/' }}">Reonaldi Saputro</a>
                     </li>
                     <li class="nav-item mx-5">
-                        <a class="nav-link"href="{{ '/blogs' }}">Blog</a>
+                        <a class="nav-link" href="{{ '/blogs' }}">Blog</a>
                     </li>
                     <li class="nav-item mx-5">
                         <a class="nav-link" href="{{ '/' }}">Contact</a>

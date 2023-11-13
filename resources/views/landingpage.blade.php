@@ -20,7 +20,7 @@
                         saya juga bisa mengimplementasikan desain yang saya buat menjadi sebuah website atau mobile apps.
                     </p>
                     <div class="tombol d-flex align-items-center justify-content-center">
-                        <a href="#" class="btn mx-3 project">See My Projects -></a>
+                        <a href="{{ '/projects' }}" class="btn mx-3 project">See My Projects -></a>
                         <a href="#" class="btn mx-3 contact">Contact Me</a>
                     </div>
                 </div>

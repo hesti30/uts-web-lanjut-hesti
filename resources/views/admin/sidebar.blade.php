@@ -53,7 +53,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ '/projectcategory' }}" class="nav-link">
                         <i class="nav-icon fa-solid fa-border-all"></i>
                         <p>
                             Project Categories
@@ -63,7 +63,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ '/project' }}" class="nav-link">
                         <i class="nav-icon fa-solid fa-briefcase"></i>
                         <p>
                             Projects
