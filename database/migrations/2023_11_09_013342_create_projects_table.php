@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('description');
             // $table->longText('body');
             $table->string('thumbnail');
-            $table->foreignId('project_category_id')->references('id')->on('project_categories')->onDelete('cascade');
+            $table->foreignId('category_id')->references('id')->on('project_categories')->onDelete('cascade');
             $table->timestamps();
         });
     }
