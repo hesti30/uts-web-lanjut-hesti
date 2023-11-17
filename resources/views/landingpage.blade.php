@@ -148,7 +148,7 @@
                         </div>
                     </div>
                     <div class="col col-lg-4 my-3">
-                        <img src="{{ asset('css/profile.jpg') }}" alt="">
+                        <img src="{{ asset('css/foto-reo.jpg') }}" alt="">
                     </div>
                 </div>
             </div>
