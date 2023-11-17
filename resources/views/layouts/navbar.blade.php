@@ -20,7 +20,7 @@
                         <a class="nav-link" href="{{ '/blogs' }}">Blog</a>
                     </li>
                     <li class="nav-item mx-5">
-                        <a class="nav-link" href="{{ '/' }}">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>

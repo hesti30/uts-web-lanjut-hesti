@@ -8,20 +8,19 @@
             <div class="row">
                 <div class="col">
                     <p>
-                        Holaaa, Saya Reonaldi Saputro dan saya adalah
+                        Holaaa, I'm Reonaldi Saputro and I'm
                     </p>
                     <h1>
-                        UI/UX Designer <br>
-                        Web Developer <br>
-                        Mobile Developer
+                        Mobile Apps Developer <br>
+                        FullStack Engineer <br>
                     </h1>
-                    <p>
+                    {{-- <p>
                         Saya sangat suka mendesain sebuah website dan mobile apps. Selain membuat membuat desainnya, <br>
                         saya juga bisa mengimplementasikan desain yang saya buat menjadi sebuah website atau mobile apps.
-                    </p>
+                    </p> --}}
                     <div class="tombol d-flex align-items-center justify-content-center">
                         <a href="{{ '/projects' }}" class="btn mx-3 project">See My Projects -></a>
-                        <a href="#" class="btn mx-3 contact">Contact Me</a>
+                        <a href="#contact" class="btn mx-3 contact">Contact Me</a>
                     </div>
                 </div>
             </div>
@@ -41,30 +40,17 @@
                 </div>
             </div>
             <div class="row row-cols-lg-3 row-cols-1 list-layanan">
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('css/icon-uiux.png') }}" alt="">
-                        <h5>UIUX Mobile</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor
-                            sit amet consectetur. </p>
+                @foreach ($project_categories as $project_category)
+                    <div class="col">
+                        <div class="card">
+                            <img src="{{ asset('css/icon-mobile.png') }}" alt="">
+                            <h5>{{ $project_category->name }}</h5>
+                            {{-- <p>Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor
+                            sit amet consectetur. </p> --}}
+                        </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('css/icon-mobile.png') }}" alt="">
-                        <h5>Mobile Development</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor
-                            sit amet consectetur. </p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('css/icon-web.png') }}" alt="">
-                        <h5>Full Stack Web</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor
-                            sit amet consectetur. </p>
-                    </div>
-                </div>
+                @endforeach
+
             </div>
         </div>
     </div>
@@ -82,67 +68,21 @@
                 </div>
             </div>
             <div class="row row-cols-lg-4 row-cols-2 list-project">
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('css/web.jpg') }}" class="card-img-top" alt="...">
-                        <h5>Website - Dashboard Admin</h5>
-                        <p>Developing Website Apr - 2023</p>
+                @foreach ($projects as $project)
+                    <div class="col">
+                        <div class="card">
+                            <img src="{{ Storage::url($project->thumbnail) }}" class="card-img-top" alt="...">
+                            <h5>{{ $project->title }}</h5>
+                            <p>{{ $project->description }}</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('css/web.jpg') }}" class="card-img-top" alt="...">
-                        <h5>Website - Dashboard Admin</h5>
-                        <p>Developing Website Apr - 2023</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('css/web.jpg') }}" class="card-img-top" alt="...">
-                        <h5>Website - Dashboard Admin</h5>
-                        <p>Developing Website Apr - 2023</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('css/web.jpg') }}" class="card-img-top" alt="...">
-                        <h5>Website - Dashboard Admin</h5>
-                        <p>Developing Website Apr - 2023</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('css/web.jpg') }}" class="card-img-top" alt="...">
-                        <h5>Website - Dashboard Admin</h5>
-                        <p>Developing Website Apr - 2023</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('css/web.jpg') }}" class="card-img-top" alt="...">
-                        <h5>Website - Dashboard Admin</h5>
-                        <p>Developing Website Apr - 2023</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('css/web.jpg') }}" class="card-img-top" alt="...">
-                        <h5>Website - Dashboard Admin</h5>
-                        <p>Developing Website Apr - 2023</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('css/web.jpg') }}" class="card-img-top" alt="...">
-                        <h5>Website - Dashboard Admin</h5>
-                        <p>Developing Website Apr - 2023</p>
-                    </div>
-                </div>
+                @endforeach
+
             </div>
             <div class="row">
                 <div class="col">
                     <div class="tombol d-flex justify-content-center">
-                        <a href="#" class="btn mx-3 project">See More -></a>
+                        <a href={{ '/projects' }} class="btn mx-3 project">See More -></a>
                     </div>
                 </div>
             </div>
@@ -187,29 +127,32 @@
             </div>
         </div>
     </div>
-
-    <div class="contact" id="#contact">
-        <div class="container">
-            <div class="row">
-                <div class="col text-center badge1">
-                    <p class="badge">Contact</p>
-                </div>
-            </div>
-            <div class="row d-flex align-items-center justify-content-between content g-4">
-                <div class="col col-lg-6 my-3">
-                    <h2>Let's start project together?</h2>
-                    <p class="p">Contact me for questions, collaboration, conversation or just saying hello. Thank you
-                        for stopping by
-                        here,</p>
-                    <div class="contact-list d-flex align-items-center justify-content-between">
-                        <p>reonaldi@gmail.com</p>
-                        <p>0812 3456 78910</p>
+    <section id="contact">
+        <div class="contact" id="#contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center badge1">
+                        <p class="badge">Contact</p>
                     </div>
                 </div>
-                <div class="col col-lg-4 my-3">
-                    <img src="{{ asset('css/profile.jpg') }}" alt="">
+                <div class="row d-flex align-items-center justify-content-between content g-4">
+                    <div class="col col-lg-6 my-3">
+                        <h2>Let's start project together?</h2>
+                        <p class="p">Contact me for questions, collaboration, conversation or just saying hello. Thank
+                            you
+                            for stopping by
+                            here,</p>
+                        <div class="contact-list d-flex align-items-center justify-content-between">
+                            <p>reonald152@gmail.com</p>
+                            {{-- <p>0812 3456 78910</p> --}}
+                        </div>
+                    </div>
+                    <div class="col col-lg-4 my-3">
+                        <img src="{{ asset('css/profile.jpg') }}" alt="">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
 @endsection

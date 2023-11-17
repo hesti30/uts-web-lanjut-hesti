@@ -22,27 +22,15 @@
                 </div>
             </div>
             <div class="row row-cols-lg-3 row-cols-1 list-projects">
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('css/icon-uiux.png') }}" alt="">
-                        <h5>UIUX Mobile</h5>
-                        <p>Membuat UI dan UX Mobile Apps atau Website dengan menggunakan tools Figma</p>
+                @foreach ($project_categories as $project_category)
+                    <div class="col">
+                        <div class="card">
+                            {{-- <img src="{{ asset('css/icon-uiux.png') }}" alt=""> --}}
+                            <h5>{{ $project_category->name }}</h5>
+                            {{-- <p>Membuat UI dan UX Mobile Apps atau Website dengan menggunakan tools Figma</p> --}}
+                        </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('css/icon-mobile.png') }}" alt="">
-                        <h5>Mobile Development</h5>
-                        <p>Membuat Mobile Apps berbasis Android atau iOS dengan menggunakan Kotlin dan Flutter</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('css/icon-web.png') }}" alt="">
-                        <h5>Full Stack Web</h5>
-                        <p>Membuat sebuah Web Application dengan menggunakan Laravel dan Library Javascript </p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -60,62 +48,15 @@
                 </div>
             </div>
             <div class="row row-cols-lg-4 row-cols-2 list-all-project">
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('css/web.jpg') }}" class="card-img-top" alt="...">
-                        <h5>Website - Dashboard Admin</h5>
-                        <p>Developing Website Apr - 2023</p>
+                @foreach ($projects as $project)
+                    <div class="col">
+                        <div class="card">
+                            <img src="{{ Storage::url($project->thumbnail) }}" class="card-img-top" alt="...">
+                            <h5>{{ $project->title }}</h5>
+                            <p>{{ $project->description }}</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('css/web.jpg') }}" class="card-img-top" alt="...">
-                        <h5>Website - Dashboard Admin</h5>
-                        <p>Developing Website Apr - 2023</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('css/web.jpg') }}" class="card-img-top" alt="...">
-                        <h5>Website - Dashboard Admin</h5>
-                        <p>Developing Website Apr - 2023</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('css/web.jpg') }}" class="card-img-top" alt="...">
-                        <h5>Website - Dashboard Admin</h5>
-                        <p>Developing Website Apr - 2023</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('css/web.jpg') }}" class="card-img-top" alt="...">
-                        <h5>Website - Dashboard Admin</h5>
-                        <p>Developing Website Apr - 2023</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('css/web.jpg') }}" class="card-img-top" alt="...">
-                        <h5>Website - Dashboard Admin</h5>
-                        <p>Developing Website Apr - 2023</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('css/web.jpg') }}" class="card-img-top" alt="...">
-                        <h5>Website - Dashboard Admin</h5>
-                        <p>Developing Website Apr - 2023</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ asset('css/web.jpg') }}" class="card-img-top" alt="...">
-                        <h5>Website - Dashboard Admin</h5>
-                        <p>Developing Website Apr - 2023</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
