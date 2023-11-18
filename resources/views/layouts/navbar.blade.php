@@ -1,29 +1,35 @@
-<div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-            <button class="navbar-toggler text-white bg-white" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon "></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto text-center">
-                    {{-- <li class="nav-item mx-5">
-                        <a class="nav-link" href="{{ '/' }}">Service</a>
-                    </li> --}}
-                    <li class="nav-item mx-5">
-                        <a class="nav-link" href="{{ '/projects' }}">Project</a>
-                    </li>
-                    <li class="nav-item mx-5">
-                        <a class="nav-link logo" href="{{ '/' }}">Reonaldi Saputro</a>
-                    </li>
-                    <li class="nav-item mx-5">
-                        <a class="nav-link" href="{{ '/blogs' }}">Blog</a>
-                    </li>
-                    <li class="nav-item mx-5">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+<header id="header" class="fixed-top d-flex justify-content-center align-items-center header-transparent">
+
+    <nav id="navbar" class="navbar">
+        <ul>
+            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+            <li><a class="nav-link scrollto" href="#about">About</a></li>
+            <!-- <li><a class="nav-link scrollto" href="#resume">Resume</a></li> -->
+            <!-- <li><a class="nav-link scrollto" href="#services">Services</a></li> -->
+            <li><a class="nav-link scrollto " href="#resume">Resume</a></li>
+            <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a> -->
+            <!-- <ul>
+            <li><a href="#">Drop Down 1</a></li>
+            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+              <ul>
+                <li><a href="#">Deep Drop Down 1</a></li>
+                <li><a href="#">Deep Drop Down 2</a></li>
+                <li><a href="#">Deep Drop Down 3</a></li>
+                <li><a href="#">Deep Drop Down 4</a></li>
+                <li><a href="#">Deep Drop Down 5</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Drop Down 2</a></li>
+            <li><a href="#">Drop Down 3</a></li>
+            <li><a href="#">Drop Down 4</a></li>
+          </ul>
+        </li> -->
+            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
     </nav>
-</div>
+    <!-- .navbar -->
+
+
+
+</header><!-- End Header -->
