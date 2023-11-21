@@ -19,7 +19,7 @@
                 <div class="section-title">
                     <span>About Me</span>
                     <h2>About Me</h2>
-                    <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+                    
                 </div>
 
                 <div class="row">
